@@ -1,0 +1,34 @@
+﻿<Window x:Class="WeatherService.MainWindow"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:local="clr-namespace:WeatherService"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Image Stretch="Fill" Source="C:\Users\Admin\source\repos\WeatherService\WeatherService\smap-weather.jpg" Height="419" VerticalAlignment="Top"/>
+        <Border   CornerRadius="8" Margin="0,0,10,0">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" ShadowDepth="20" Color="Black"/>
+            </Border.Effect>
+            <StackPanel Margin="0,34,-71,0">
+                <TextBlock FontSize="32" Margin="10 10 0 0 "><Run Text="Info about Weather"/></TextBlock>
+                <Border BorderBrush="Crimson" Background="AliceBlue" Margin="0,0,556,0">
+                    <TextBox x:Name="loginTxtBox" FontSize="20" Margin="10,10,591,10" materialDesign:HintAssist.Hint="Login" Style="{DynamicResource MaterialDesignComboBoxEditableTextBox}"/>
+                </Border>
+                <StackPanel Orientation="Horizontal" Margin="0,0,331,0">
+                    <Button Margin="10" Style="{DynamicResource MaterialDesignFlatAccentBgButton}" Click="Weather" Content="City"/>
+
+                </StackPanel>
+                <Border Background="AliceBlue" Margin="0,0,556,0" Height="50">
+                    <TextBox  x:Name="passwordBox" FontSize="26" Margin="10,10,591,10" BorderBrush="Black"  materialDesign:HintAssist.Hint="Password" Style="{DynamicResource MaterialDesignComboBoxEditableTextBox}"/>
+                </Border>
+                <StackPanel RenderTransformOrigin="0.474,1.949"/>
+                <Button Click="City" Content="City" Height="33" Margin="10,10,716,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
